@@ -1,4 +1,4 @@
-
+-- UPDATE
 -- 1. TAULES MESTRES
 INSERT INTO CICLE (id_cicle, nom_cicle) VALUES 
 (1, 'ASIR'), (2, 'DAM'), (3, 'DAW');
@@ -138,14 +138,15 @@ INSERT INTO SOLLICITA (id_empresa, id_tec) VALUES (1, 1), (1, 6), (2, 3), (3, 4)
 
 INSERT INTO PREFEREIX (id_empresa, id_cicle) VALUES (1, 1), (2, 2), (3, 3);
 
--- ======================================================
--- EXEMPLES D'ACTUALITZACIÓ I ESBORRAT
--- ======================================================
 
+
+
+-- UPDATE
 UPDATE ALUMNE SET telefon = '699887766', email = 'miquel.molina.new@iticbcn.cat' WHERE id_alumne = 1;
 UPDATE AVALUACIO SET puntuacio_global = 7.5, nivell_tecnic = 7, moduls_troncals = TRUE WHERE id_alumne = 12;
 UPDATE EMPRESA SET dual_intensiva = TRUE WHERE sector = 'Tecnologia';
 
+-- DELETE
 DELETE FROM DOMINA WHERE id_alumne = 3 AND id_tec = 3;
 DELETE FROM HISTORIAL_CONTACTE WHERE id_enviament = 11;
 DELETE FROM ALUMNE WHERE id_alumne = 18;
